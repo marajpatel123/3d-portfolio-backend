@@ -9,12 +9,10 @@ const DB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/contackDeta
 
 const connectDB= async ()=>{
     try{
-        await mongoose.connect(DB_URI,{
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log("MongoDB connected successfully");
-
+        await mongoose.connect(DB_URI).then(() => {
+            console.log("MongoDB connected successfully");
+        }
+        );
     }
     catch(err){
         console.error("MongoDB connection failed:", err.message);
