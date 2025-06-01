@@ -10,11 +10,11 @@ const port = process.env.PORT || 5000;
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://3-d-portfolio-nine-blond.vercel.app',
+  'https://3-d-portfolio-git-main-marajpatel123s-projects.vercel.app',
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: "https://3-d-portfolio-nine-blond.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // Allow cookies/sessions
 }));
