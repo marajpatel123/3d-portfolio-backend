@@ -5,11 +5,11 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.DB_URI || 'mongodb://localhost:27017/contackDetails';
+const DB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/contackDetails';
 
 const connectDB= async ()=>{
     try{
-        await mongoose.connect(MONGODB_URI,{
+        await mongoose.connect(DB_URI,{
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
