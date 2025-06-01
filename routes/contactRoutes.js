@@ -3,7 +3,7 @@ const contactSchema = require("../models/contactModel");
 
 const router= express.Router();
 
-router.post("/contact", async(req, res)=>{
+router.post('/contact', async(req, res)=>{
   try{
     const {name, email, message}= req.body;
     if(!name || !email || !message){
