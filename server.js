@@ -35,6 +35,9 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 connectDB();
+
+
+
 app.use(contactApi);
 // Home route
 app.post('/contact', (req, res) => {
